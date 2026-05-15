@@ -25,6 +25,12 @@ Atualmente, o frontend conta com:
 - ✅ Layout responsivo
 - ✅ Navbar personalizada
 - ✅ Footer com redes sociais
+- ✅ Interface moderna inspirada em sistemas de farmácia
+
+🛣️ Rotas
+- ✅ Configuração de rotas com React Router DOM
+- ✅ Navegação entre páginas
+- ✅ Links dinâmicos na Navbar
 
 📦 Categorias
 - ✅ Estrutura preparada para gerenciamento de categorias
@@ -43,6 +49,7 @@ O projeto utiliza uma identidade visual inspirada em sistemas modernos de farmá
 - 🟢 Elementos visuais minimalistas
 - ✨ Componentes arredondados
 - 📱 Layout responsivo
+- 🎯 Navegação moderna com efeitos hover
 
 ---
 
@@ -73,3 +80,21 @@ Clone o repositório:
 ```bash
 git clone https://github.com/BiiaBraga/projeto_final_bloco_03.git
 cd projeto_final_bloco_03
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npm run dev
+```
+
+---
+
+# 👩‍💻 Desenvolvido por
+Beatriz Braga Silva
