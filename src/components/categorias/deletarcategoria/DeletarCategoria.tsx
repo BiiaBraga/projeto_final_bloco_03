@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { ClipLoader } from "react-spinners"
+import { toast } from "react-toastify"
+
 import type Categoria from "../../../models/Categoria"
 import { buscar, deletar } from "../../../services/Service"
 
@@ -17,7 +19,7 @@ function DeletarCategoria() {
         try {
             await buscar(`/categorias/${id}`, setCategoria)
         } catch (error: any) {
-            alert("Erro ao buscar categoria")
+            toast.error("Erro ao buscar categoria")
         }
     }
 
@@ -36,10 +38,10 @@ function DeletarCategoria() {
 
         try {
             await deletar(`/categorias/${id}`)
-            alert("Categoria deletada com sucesso!")
+            toast.success("Categoria deletada com sucesso!")
             retornar()
         } catch (error: any) {
-            alert("Erro ao deletar categoria")
+            toast.error("Erro ao deletar categoria")
         }
 
         setIsLoading(false)

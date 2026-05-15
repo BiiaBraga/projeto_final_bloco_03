@@ -9,6 +9,8 @@ import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCa
 import ListaProdutos from './components/produtos/listaprodutos/ListaProdutos'
 import FormProduto from './components/produtos/formproduto/FormProduto'
 import DeletarProduto from './components/produtos/deletarproduto/DeletarProduto'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
     return (
@@ -30,6 +32,14 @@ function App() {
                 </Routes>
 
                 <Footer />
+                <ToastContainer
+                    position="top-right"
+                    autoClose={3000}
+                    hideProgressBar={false}
+                    closeOnClick
+                    pauseOnHover
+                    theme="colored"
+                />
             </BrowserRouter>
         </>
     )

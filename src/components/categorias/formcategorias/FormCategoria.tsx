@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { ClipLoader } from "react-spinners"
+import { toast } from "react-toastify"
 import type Categoria from "../../../models/Categoria"
 import { atualizar, buscar, cadastrar } from "../../../services/Service"
 
@@ -17,7 +18,7 @@ function FormCategoria() {
         try {
             await buscar(`/categorias/${id}`, setCategoria)
         } catch (error: any) {
-            alert("Erro ao buscar categoria")
+            toast.error("Erro ao buscar categoria")
         }
     }
 
@@ -41,15 +42,15 @@ function FormCategoria() {
         try {
             if (id !== undefined) {
                 await atualizar(`/categorias`, categoria, setCategoria)
-                alert("Categoria atualizada com sucesso!")
+                toast.success("Categoria atualizada com sucesso!")
             } else {
                 await cadastrar(`/categorias`, categoria, setCategoria)
-                alert("Categoria cadastrada com sucesso!")
+                toast.success("Categoria cadastrada com sucesso!")
             }
 
             retornar()
         } catch (error: any) {
-            alert("Erro ao salvar categoria")
+            toast.error("Erro ao salvar categoria")
         }
 
         setIsLoading(false)
@@ -105,10 +106,7 @@ function FormCategoria() {
                     className="rounded-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 transition flex items-center justify-center h-14"
                 >
                     {isLoading ? (
-                        <ClipLoader
-                            color="#ffffff"
-                            size={24}
-                        />
+                        <ClipLoader color="#ffffff" size={24} />
                     ) : (
                         <span>
                             {id !== undefined ? "Atualizar" : "Cadastrar"}

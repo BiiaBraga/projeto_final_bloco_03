@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { ClipLoader } from "react-spinners"
+import { toast } from "react-toastify"
 
 import type Produto from "../../../models/Produto"
 import type Categoria from "../../../models/Categoria"
@@ -21,7 +22,7 @@ function FormProduto() {
         try {
             await buscar(`/produtos/${id}`, setProduto)
         } catch (error: any) {
-            alert("Erro ao buscar produto")
+            toast.error("Erro ao buscar produto")
         }
     }
 
@@ -29,7 +30,7 @@ function FormProduto() {
         try {
             await buscar("/categorias", setCategorias)
         } catch (error: any) {
-            alert("Erro ao buscar categorias")
+            toast.error("Erro ao buscar categorias")
         }
     }
 
@@ -74,15 +75,15 @@ function FormProduto() {
         try {
             if (id !== undefined) {
                 await atualizar("/produtos", produto, setProduto)
-                alert("Produto atualizado com sucesso!")
+                toast.success("Produto atualizado com sucesso!")
             } else {
                 await cadastrar("/produtos", produto, setProduto)
-                alert("Produto cadastrado com sucesso!")
+                toast.success("Produto cadastrado com sucesso!")
             }
 
             retornar()
         } catch (error: any) {
-            alert("Erro ao salvar produto")
+            toast.error("Erro ao salvar produto")
         }
 
         setIsLoading(false)

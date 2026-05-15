@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { ClipLoader } from "react-spinners"
+import { toast } from "react-toastify"
 
 import type Produto from "../../../models/Produto"
 import { buscar, deletar } from "../../../services/Service"
@@ -18,7 +19,7 @@ function DeletarProduto() {
         try {
             await buscar(`/produtos/${id}`, setProduto)
         } catch (error: any) {
-            alert("Erro ao buscar produto")
+            toast.error("Erro ao buscar produto")
         }
     }
 
@@ -37,10 +38,10 @@ function DeletarProduto() {
 
         try {
             await deletar(`/produtos/${id}`)
-            alert("Produto deletado com sucesso!")
+            toast.success("Produto deletado com sucesso!")
             retornar()
         } catch (error: any) {
-            alert("Erro ao deletar produto")
+            toast.error("Erro ao deletar produto")
         }
 
         setIsLoading(false)
