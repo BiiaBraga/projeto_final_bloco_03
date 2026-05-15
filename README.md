@@ -41,7 +41,20 @@ Atualmente, o frontend conta com:
 - ✅ Consumo da API utilizando Axios
 
 💊 Produtos
-- ✅ Estrutura preparada para gerenciamento de produtos
+- ✅ Listagem de produtos
+- ✅ Cadastro de produtos
+- ✅ Atualização de produtos
+- ✅ Exclusão de produtos
+- ✅ Associação de produtos com categorias
+- ✅ Pesquisa de produtos por nome
+- ✅ Exibição da categoria vinculada ao produto
+- ✅ Integração completa com o backend local
+- ✅ Consumo da API utilizando Axios
+
+🔔 Feedback Visual
+- ✅ Notificações modernas com React Toastify
+- ✅ Loading animado com React Spinners
+- ✅ Feedback visual para ações da aplicação
 
 ---
 
@@ -55,6 +68,7 @@ O projeto utiliza uma identidade visual inspirada em sistemas modernos de farmá
 - ✨ Componentes arredondados
 - 📱 Layout responsivo
 - 🎯 Navegação moderna com efeitos hover
+- 🔔 Feedback visual com notificações toast
 
 ---
 
@@ -75,6 +89,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - **Axios**
 - **Phosphor Icons**
 - **React Spinners**
+- **React Toastify**
 
 ---
 
