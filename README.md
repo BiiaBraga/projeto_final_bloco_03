@@ -33,7 +33,12 @@ Atualmente, o frontend conta com:
 - ✅ Links dinâmicos na Navbar
 
 📦 Categorias
-- ✅ Estrutura preparada para gerenciamento de categorias
+- ✅ Listagem de categorias
+- ✅ Cadastro de categorias
+- ✅ Atualização de categorias
+- ✅ Exclusão de categorias
+- ✅ Integração completa com o backend local
+- ✅ Consumo da API utilizando Axios
 
 💊 Produtos
 - ✅ Estrutura preparada para gerenciamento de produtos
@@ -92,6 +97,20 @@ Execute o projeto:
 
 ```bash
 npm run dev
+```
+
+---
+
+# 🔗 Integração com Backend
+
+Para que o frontend funcione corretamente, o backend da Farmácia deve estar em execução localmente.
+
+### Repositório do Backend:
+- https://github.com/BiiaBraga/Farmacia-backend
+
+### Porta utilizada:
+```txt
+http://localhost:3000
 ```
 
 ---
